@@ -100,6 +100,9 @@ namespace brand_logo_downloader
         {
             try
             {
+                string imagePath = @"..\..\Images\";
+                if (!Directory.Exists(imagePath))
+                    Directory.CreateDirectory(imagePath);
                 using (WebClient webClient = new WebClient())
                 {
                     webClient.Headers["User-Agent"] = "Mozilla/4.0 (Compatible; Windows NT 5.1; MSIE 6.0) " + " (compatible; MSIE 6.0; Windows    NT 5.1; " + ".NET CLR 1.1.4322; .NET CLR 2.0.50727)";
@@ -115,7 +118,7 @@ namespace brand_logo_downloader
                                 if (image.Height > 150)
                                 {
                                     var img = resizeImage(image, new Size(400, 400));
-                                    img.Save(@"..\..\Images\" + filename + ".png", format);
+                                    img.Save(imagePath + filename + ".png", format);
 
                                 }
 
