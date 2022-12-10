@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/brand-logo-downloader/.vs/brand-logo-downloader
+/brand-logo-downloader/bin/Debug
+/brand-logo-downloader/obj/Debug
+/brand-logo-downloader/packages
